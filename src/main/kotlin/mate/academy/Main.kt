@@ -13,10 +13,10 @@ package mate.academy
 //Process finished with exit code 0
 fun greetUsers() {
     var name: String? = null
+    val trimmedName = name?.trim()
+    name = readLine()
     do {
-        print("Please enter a name (or press Enter toguit): ")
-        name = readLine()
-        val trimmedName = name?.trim()
+        print("Please enter a name (or press Enter to guit): ")
         if (!trimmedName.isNullOrEmpty()) {
             println("Hello, $trimmedName!")
         }
