@@ -13,19 +13,21 @@ package mate.academy
 //Process finished with exit code 0
 fun greetUsers() {
     var trimmedName: String? = null
-
+var shouldContinue = true
     do {
         print("Please enter a name (or press Enter to quit): ")
  val name = readLine()
          trimmedName = name?.trim()
         if (!trimmedName.isNullOrEmpty()) {
             println("Hello, $trimmedName!")
-            break
+            shouldContinue = false
         } else if (name == "") {
             println("Exiting program")
-            break
+            shouldContinue = false
+        } else {
+            println("Name cannot be empty or just spaces. Please try again.")
         }
-    } while (trimmedName.isNullOrEmpty())
+    } while (shouldContinue)
     // implement function
 }
 
