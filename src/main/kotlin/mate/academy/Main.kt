@@ -14,7 +14,6 @@ package mate.academy
 fun greetUsers() {
     var name: String? = null
     val trimmedName = name?.trim()
-    name = readLine()
     do {
         print("Please enter a name (or press Enter to guit): ")
         if (!trimmedName.isNullOrEmpty()) {
